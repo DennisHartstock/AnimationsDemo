@@ -12,9 +12,20 @@ class ScaleActivity : AppCompatActivity() {
         setContentView(R.layout.activity_scale)
     }
 
-    fun startScaleAnimation(view: View) {
+    fun startAnimation(view: View) {
+        // startScaleAnimation()
+        translateAnimation()
+    }
+
+    private fun startScaleAnimation() {
         val scaleAnimation = AnimationUtils.loadAnimation(this, R.anim.scale_animation)
         val imageView = findViewById<ImageView>(R.id.imageView)
         imageView.startAnimation(scaleAnimation)
+    }
+
+    private fun translateAnimation() {
+        val translateAnimation = AnimationUtils.loadAnimation(this, R.anim.translate_animation)
+        val imageView = findViewById<ImageView>(R.id.imageView)
+        imageView.startAnimation(translateAnimation)
     }
 }

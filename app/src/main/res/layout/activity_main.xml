@@ -28,13 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/openScaleActivityButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="500dp"
-            android:onClick="openScaleActivity"
-            android:text="open scale activity" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

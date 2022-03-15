@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val animationImageView = findViewById<ImageView>(R.id.animationImageview)
+        animationImageView.setOnClickListener {
+            openScaleActivity()
+        }
+
         val gradientOverlay = findViewById<LinearLayout>(R.id.gradientOverlay)
 
         val background = animationImageView.background as AnimationDrawable
@@ -27,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         overlay.start()
     }
 
-    fun openScaleActivity(view: View) {
+    private fun openScaleActivity() {
         val intent = Intent(this, ScaleActivity::class.java)
         startActivity(intent)
     }
